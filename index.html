@@ -216,6 +216,7 @@
             vertical-align: top;
         }
     </style>
+    <link href="./plugins/datastatics.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -264,6 +265,12 @@
             <div class="digital front number0"></div>
             <div class="digital back number1"></div>
         </div>
+    </div>
+
+    <div class="dataStatistics">
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set set_last"></div>
     </div>
 
     <!-- built files will be auto injected -->
@@ -493,6 +500,13 @@
             }
         }, 1000)
 
+    </script>
+    <script src="./plugins/jquery.min.js"></script>
+    <script src="./plugins/datastatics.js"></script>
+    <script>
+        window.onload = function () {
+            $('.dataStatistics').dataStatistics({ min: 89, max: 142, time: 2000, len: 3 });
+        }
     </script>
 </body>
 
